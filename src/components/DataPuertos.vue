@@ -78,7 +78,8 @@ export default {
         const respuesta = await this.axios.get(
           VUE_APP_API_URL+i
         );
-        console.log(respuesta)
+        console.log('respuesta',VUE_APP_API_URL+i)
+        console.log(respuesta.data)
         this.list.push(respuesta.data.data);
       }
 
