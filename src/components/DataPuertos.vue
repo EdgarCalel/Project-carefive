@@ -74,10 +74,11 @@ export default {
   },
   methods: {
     async getData() {
-      for (let i = 1; i <= 25; i++) {
+    for (let i = 1; i <= 25; i++) {
         const respuesta = await this.axios.get(
-          `${VUE_APP_API_URL}${i}`
+          VUE_APP_API_URL+i
         );
+        console.log(respuesta)
         this.list.push(respuesta.data.data);
       }
 
